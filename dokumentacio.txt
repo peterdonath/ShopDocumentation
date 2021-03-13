@@ -1,0 +1,74 @@
+Dokumentáció a készletkezelő alkalmazáshoz
+
+Az alkalmazás web böngészőben fut, telepítést nem igényel,
+a használatához csak a megfelelő felhasználónév és jelszó párosra van szükség.
+
+------------------------------------------------------------------------------------------
+
+Az alkalmazás menüpontjai és használata
+
+1. Eladás
+  A termékek értékesítésére szolgál.
+  A meüpontra kattintva a nyitott és lezárt vásárlások listája látható,
+  lapozható formátumban, az oldalanként megjeleníthető vásárlások mennysége beállítható
+  Új vásárlás az 'Új Felvétele' gombbal indítható.
+  A táblázat valamely sorára kattintva megtekinthető a korábbi vásárlás tartalma.
+  A még nem lezárt vásárlás módosítható.
+  
+  - Új vásárás
+    A kurzor automatikusan a vonalkód mezőbe kerül. A vonalkód beolvasása után a 'készlet'
+    legördülőbe automatikusan megjelenik a vonalkódhoz tartozó termék neve.
+    Amennyiben a beolvasott vonalkód nem található a rendszerben a 'készlet' legördülőben
+    a 'készlet' felirat marad.
+    Vonalkód nélkül a 'készlet' legördülőre kattintva megkereshető és kiválasztható
+    a termék.
+    Sikeres vonalkód olvasás és készlet kiválasztása után a kurzor a 'Mennyiség' mezőbe
+    kerül. Mennyiség megadható a billentyűzet segítségéve, vagy a mezőben található nyilak
+    segítségével is.
+    A mennyiség megadása után a tétel rögzítése Enter billentyű megnyomásával, vagy a
+    'Hozzáadás' gomb megnyomásával lehetéséges.
+    Sikeres rögzítés után a kiválasztott termék a megadott mennyiséggel és a készleteknél
+    beállított eladási árral bekerül a beviteli megzők alatti táblázatba.
+    
+    Amennyiben a felhasználó elnavigál az oldalról (például valamelyik menüre kattitva)
+    a vásárlás nyitt státuszban marad, és Törlésig módosítható, vagy lezárható.
+    
+    A nyitott vásárlások három nap elteltével automatikusan törlésre kerülnek.
+    
+2. Készlet
+  A készlet menüpontban a rendszerben tárolt termékek adatait, készletinformációt lehet
+  megtekinteni és módosítani.
+  A már létező termékek a felületen táblázatos formában jelennek meg.
+  A táblázat alján beállítható a megjelenő tételek mennyisége, illetve lehetőség van
+  lapozásra.
+  A 'keresés' mező használatával lehet keresni a termékek között. A mező keres a
+  cikkszámban, termék nevében és további mezőkben is. Minden egyes karakter bevitele után
+  a táblázatban csak a kifejezésnek megfelelő tételek maradnak bent.
+  Amennyiben egy termék készlete a terméken beállított minimális készlet alá süllyed
+  a termék sora piros betüszínnel jelenik meg.
+  A kifogyó készletek listája megjeleníthető a 'kifogyó készletek' jelölőnégyzet használatával.
+  - Szerkesztés
+    A listában a termék sorára kattintva tölthető be a termék adatlapja.
+    
+  
+------------------------------------------------------------------------------------------
+
+Folyamatok:
+
+1. Bevételezés
+  - Ellenőrizd, hogy minden termék, ami a számlán szerepel megtalálható a 'Készlet'
+    menüpont alatt.
+  - Ellenőrizd, hogy a beszállító szerepel a törzsadatok között.
+  - Amennyiben a termékek és a beszállító is létezik a 'Beszerzés' menüben az 'Új felvétele'
+    gomb megnyomásával lehet elkezdeni a bevételezést.
+  - A beszállítót a 'Beszállító' legördülővel lehet kiválasztani.
+  - A beszerzés dátuma a mezőben található naptár ikonra kattitva lehetséges.
+  - A számla sorszámának megadása után aktívvá válik a 'Bevételezés' gomb. Ennek megyomása
+    után megjelnnek a 'Készlet', a 'Mennyiség' és az 'Ár' mezők.
+  - A 'Készlet' mező egy kereső mező, hasonlóan a 'Készlet' menüben található keresőhöz a
+    termék nevében keres, minden terméket felkínál, melynek a nevében megtalálható a beírt
+    kifejezés. A termék a nevére kattintva vagy az irány billentyűk és az enter billetyű
+    használatával lehetésges.
+  - A mennyiség mezőbe kattitva adható meg az érkezett mennyiség. Innen a tab billentyű
+    megnyomásával, vagy az 'Ár' mezőbe való kattintással lehet továbbhaladni.
+  - Az ár megadása után a 'Tétel felvétele' gomb megnyomásával rögzíthető a tétel.
